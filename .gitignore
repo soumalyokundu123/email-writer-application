@@ -1,0 +1,23 @@
+
+# IDE
+.idea/
+.vscode/
+
+# Java
+**/target/
+**/out/
+*.class
+
+# Node
+**/node_modules/
+**/dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+/email_writer_ext
+/hello-world-ext
