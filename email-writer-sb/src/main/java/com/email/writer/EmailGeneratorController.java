@@ -15,4 +15,16 @@ public class EmailGeneratorController {
         String response=emailGeneratorService.generateEmailReply(emailRequest);
         return ResponseEntity.ok(response);
     }
+
+    @PostMapping("/refine")
+    public ResponseEntity<String> refineEmail(
+            @RequestBody EmailRefineRequest request) {
+
+        String response = emailGeneratorService.refineEmailReply(
+                request.getGeneratedReply(),
+                request.getAction()
+        );
+
+        return ResponseEntity.ok(response);
+    }
 }
